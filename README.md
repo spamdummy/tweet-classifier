@@ -4,6 +4,9 @@ This project aims to classify Tweets as science or non-science related.
 The ScienceClassifier is a trained version of the generic TextClassifier.
 The TextClassifier uses the [Multinomial Naive Bayes](http://en.wikipedia.org/wiki/Naive_Bayes_classifier#Multinomial_naive_Bayes) model.
 All code so far is in [Python](https://www.python.org/).
+
+##Dependencies
+* [Beautiful Soup 4](http://www.crummy.com/software/BeautifulSoup/)
 ##Examples:
 ###Science Classifier
 ```

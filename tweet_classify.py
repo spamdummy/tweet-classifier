@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from GetPage import getURLText
 from ScienceTweetClassifier import getClassifier
 data = {
 	"science":[

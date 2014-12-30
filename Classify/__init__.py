@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import ScienceTweetClassifier
+import TextClassifier
+import ScienceClassifier
 import GetPage
-
-__all__ = ["ScienceTweetClassifier", "GetPage"]

@@ -20,12 +20,10 @@ laid the foundation for classical mechanics."""
 
 #prints 'other'
 print c.classify(
-"""MTV (an initialism of music television) is an American basic cable and 
-satellite television channel owned by the MTV Networks Music & Logo Group, 
-a unit of the Viacom Media Networks division of Viacom. """
+"""A disc jockey (abbreviated D.J., DJ or deejay) is a person who mixes recorded music for an audience; in a club event or rave, this is an audience of dancers."""
 )
 ```
-Examples text from Wikipedia: [Science](http://en.wikipedia.org/wiki/Science), [MTV](http://en.wikipedia.org/wiki/MTV).
+Examples text from Wikipedia: [Newton's Laws](http://en.wikipedia.org/wiki/Newton%27s_laws_of_motion), [DJ](http://en.wikipedia.org/wiki/Disc_jockey).
 ###Generic Text Classifier
 ```
 from Classify.TextClassifier import TextClassifier

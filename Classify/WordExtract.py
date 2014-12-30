@@ -4,7 +4,7 @@ CACHE_GET_WORDS = "/var/tmp/getWordsCache"
 import re, os
 import cPickle as pickle
 from collections import defaultdict
-from GetPage import getURLText, getParagraphs
+from GetPage import getURLText
 from StopWords import STOP_WORDS
 
 def first_sentence(text):

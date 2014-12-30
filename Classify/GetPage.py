@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import urllib2, os
 import cPickle as pickle
-from ParsePage import html_to_text, html_to_paragraphs
 from unidecode import unidecode
 
 CACHE_PATH = "/var/tmp/pageCache"
@@ -32,9 +31,6 @@ def readURL(url):
 	out.close()
 	return html
 	
-def getParagraphs(url):
-	html = readURL(url)
-	return html_to_paragraphs(unidecode(html))
 		
 def getURLText(url):
 	print "getURLText:", url

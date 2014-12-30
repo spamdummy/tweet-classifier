@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from Classify.ScienceTweetClassifier import getClassifier
+from Classify.ScienceClassifier import getClassifier
 
 data = {
 	"science":[

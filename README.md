@@ -4,9 +4,13 @@ This project aims to classify Tweets as science or non-science related.
 The ScienceClassifier is a trained version of the generic TextClassifier.
 The TextClassifier uses the [Multinomial Naive Bayes](http://en.wikipedia.org/wiki/Naive_Bayes_classifier#Multinomial_naive_Bayes) model.
 All code so far is in [Python](https://www.python.org/).
+
+##Dependencies
+* [Beautiful Soup 4](http://www.crummy.com/software/BeautifulSoup/)
+
 ##Examples:
 ###Science Classifier
-```
+```python
 #To use the science text classifier
 from Classify.ScienceClassifier import getClassifier
 
@@ -27,7 +31,7 @@ or rave, this is an audience of dancers."""
 ```
 Examples text from Wikipedia: [Newton's Laws](http://en.wikipedia.org/wiki/Newton%27s_laws_of_motion), [DJ](http://en.wikipedia.org/wiki/Disc_jockey).
 ###Generic Text Classifier
-```
+```python
 from Classify.TextClassifier import TextClassifier
 from Classify.GetPage import getURLText
 training_data = {

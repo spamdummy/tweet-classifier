@@ -12,10 +12,10 @@ opener.addheaders = [('User-agent', USER_AGENT)]
 
 def readURL(url):
 	path = None
-	if isinstance(url,int):
-		path = "%s/%s" % (CACHE_PATH,url)
-	else:
-		path = "%s/%s" % (CACHE_PATH,hash(url))
+	h = url
+	if not isinstance(url,int):
+		h = hash(url)		
+	path = os.path.join(CACHE_PATH,str(h))
 	if os.path.exists(path):
 		t = None
 		with open(path,"r") as f:
@@ -24,9 +24,9 @@ def readURL(url):
 	elif isinstance(url,int):
 		raise Exception(url,"not cached")
 	html = None
-	with opener.open(url) as f
+	with opener.open(url) as f:
 		html = f.read()
-	with open(path,"w") as out
+	with open(path,"w") as out:
 		out.write(html)	
 	return html
 	

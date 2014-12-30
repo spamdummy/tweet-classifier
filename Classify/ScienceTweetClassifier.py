@@ -6,7 +6,7 @@ import CrossValidate
 from WordExtract import wordFreqByURL, getWordsByURL
 from GetPage import getURLText
 from GetFreq import getFreq
-from Classify import TextClassifier
+from TextClassifier import TextClassifier
 data = {
 	"science":[		
 		"http://en.wikipedia.org/wiki/Science",

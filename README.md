@@ -10,7 +10,7 @@ All code so far is in [Python](https://www.python.org/).
 
 ##Examples:
 ###Science Classifier
-```
+```python
 #To use the science text classifier
 from Classify.ScienceClassifier import getClassifier
 
@@ -31,7 +31,7 @@ or rave, this is an audience of dancers."""
 ```
 Examples text from Wikipedia: [Newton's Laws](http://en.wikipedia.org/wiki/Newton%27s_laws_of_motion), [DJ](http://en.wikipedia.org/wiki/Disc_jockey).
 ###Generic Text Classifier
-```
+```python
 from Classify.TextClassifier import TextClassifier
 from Classify.GetPage import getURLText
 training_data = {

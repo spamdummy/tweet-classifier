@@ -63,5 +63,6 @@ At the moment cached webpages are stored in /var/tmp (this may be an issue for W
 ##Attributions
 * [Python](https://www.python.org/)
 * [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/)
+* [StopWords](http://www.ranks.nl/stopwords/)
 * [Wikipedia](http://www.en.wikipedia.org)
 

@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 import urllib2, os
 import cPickle as pickle
-from unidecode import unidecode
 
 CACHE_PATH = "/var/tmp/pageCache"
 CACHE_PATH_B = "/var/tmp/parsedHTMLCache"
-opener = urllib2.build_opener()
+
 USER_AGENT = 'Mozilla/5.0'
+opener = urllib2.build_opener()
 opener.addheaders = [('User-agent', USER_AGENT)]
 
 
@@ -17,18 +17,17 @@ def readURL(url):
 	else:
 		path = "%s/%s" % (CACHE_PATH,hash(url))
 	if os.path.exists(path):
-		f = open(path,"r")
-		t = f.read()
-		f.close()
+		t = None
+		with open(path,"r") as f:
+			t = f.read()
 		return t
 	elif isinstance(url,int):
 		raise Exception(url,"not cached")
-	f = opener.open(url)
-	html = f.read()
-	f.close()
-	out = open(path,"w")
-	out.write(html)
-	out.close()
+	html = None
+	with opener.open(url) as f
+		html = f.read()
+	with open(path,"w") as out
+		out.write(html)	
 	return html
 	
 		
@@ -44,12 +43,7 @@ def getURLText(url):
 			return pickle.load(f)
 	else:
 		html = readURL(url)
-		#html = unidecode(html)
 		html_parsed = html_to_text(html)
 		with open(path,"wb") as f:
 			pickle.dump(html_parsed,f)
 		return html_parsed
-
-	"""
-	return html_to_text(unidecode(readURL(url)))
-	"""

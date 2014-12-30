@@ -1,8 +1,8 @@
 tweet-classify
 ==============
-Includes a general Text Classification class.
-The science specific text classifier (ScienceClassifier) is a trained version of the generic TextClassifier.
-
+This project aims to classify Tweets as science or non-science related.
+The ScienceClassifier is a trained version of the generic TextClassifier.
+The TextClassifier uses the [Multinomial Naive Bayes](http://en.wikipedia.org/wiki/Naive_Bayes_classifier#Multinomial_naive_Bayes) model.
 ##Examples:
 ###Science Classifier
 ```
@@ -24,6 +24,7 @@ satellite television channel owned by the MTV Networks Music & Logo Group,
 a unit of the Viacom Media Networks division of Viacom. """
 )
 ```
+Examples text from Wikipedia: [Science](http://en.wikipedia.org/wiki/Science), [MTV](http://en.wikipedia.org/wiki/MTV).
 ###Generic Text Classifier
 ```
 #todo

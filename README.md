@@ -20,7 +20,9 @@ laid the foundation for classical mechanics."""
 
 #prints 'other'
 print c.classify(
-"""A disc jockey (abbreviated D.J., DJ or deejay) is a person who mixes recorded music for an audience; in a club event or rave, this is an audience of dancers."""
+"""A disc jockey (abbreviated D.J., DJ or deejay) is a person 
+who mixes recorded music for an audience; in a club event 
+or rave, this is an audience of dancers."""
 )
 ```
 Examples text from Wikipedia: [Newton's Laws](http://en.wikipedia.org/wiki/Newton%27s_laws_of_motion), [DJ](http://en.wikipedia.org/wiki/Disc_jockey).

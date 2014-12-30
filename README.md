@@ -65,4 +65,6 @@ At the moment cached webpages are stored in /var/tmp (this may be an issue for W
 * [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/)
 * [StopWords](http://www.ranks.nl/stopwords/)
 * [Wikipedia](http://www.en.wikipedia.org)
+* [Twitter](https://twitter.com/)
+* Tweets: [a tweet on food](https://twitter.com/foodandwine/status/549278672109056001) and [a tweet on sport](https://twitter.com/SECfootball/status/549808451652579328)
 

@@ -12,6 +12,8 @@ opener.addheaders = [('User-agent', USER_AGENT)]
 
 
 def readURL(url):
+	if not os.path.exists(CACHE_PATH):
+		os.makedirs(CACHE_PATH)	
 	path = None
 	h = url
 	if not isinstance(url,int):

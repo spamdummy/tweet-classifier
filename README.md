@@ -50,7 +50,7 @@ for category,urls in training_data.items():
 	for url in urls:
 		t.train(getURLText(url),category)
 
-#now we can use the classifier on some Tweets!
+#now we can put the classifier into action. Here we are classifying some tweets!
 print t.classify("Sorry grilled cheese sandwiches, we've moved on to grilled chocolate sandwiches.")
 print t.classify("Arkansas defense suffocates Texas in 31-7 win.")
 

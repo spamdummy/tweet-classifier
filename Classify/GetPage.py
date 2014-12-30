@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import urllib2, os
 import cPickle as pickle
+from ParsePage import html_to_text
 
 CACHE_PATH = "/var/tmp/pageCache"
 CACHE_PATH_B = "/var/tmp/parsedHTMLCache"
@@ -23,9 +24,10 @@ def readURL(url):
 		return t
 	elif isinstance(url,int):
 		raise Exception(url,"not cached")
-	html = None
-	with opener.open(url) as f:
-		html = f.read()
+	
+	f = opener.open(url)
+	html = f.read()
+	f.close()
 	with open(path,"w") as out:
 		out.write(html)	
 	return html

@@ -58,7 +58,7 @@ print t.classify("Arkansas defense suffocates Texas in 31-7 win.")
 ##The Details
 Calling GetPage.getURLText grabs a webpage's text.
 The cPickle class is used for caching.
-At the moment cached files/pages are stored in /var/tmp (this may be an issue for Windows users?) 
+At the moment cached webpages are stored in /var/tmp (this may be an issue for Windows users?) 
 
 ##Attributions
 * [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/)

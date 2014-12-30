@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-from GetPage import getURLText
-from ScienceTweetClassifier import getClassifier
+from Classify.ScienceTweetClassifier import getClassifier
+
 data = {
 	"science":[
 		"These dazzling light sculptures will test your sense of reality",

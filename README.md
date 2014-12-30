@@ -3,7 +3,7 @@ tweet-classify
 This project aims to classify Tweets as science or non-science related.
 The ScienceClassifier is a trained version of the generic TextClassifier.
 The TextClassifier uses the [Multinomial Naive Bayes](http://en.wikipedia.org/wiki/Naive_Bayes_classifier#Multinomial_naive_Bayes) model.
-All code so far is in Python.
+All code so far is in [Python](https://www.python.org/).
 ##Examples:
 ###Science Classifier
 ```
@@ -61,6 +61,7 @@ The cPickle class is used for caching.
 At the moment cached webpages are stored in /var/tmp (this may be an issue for Windows users?) 
 
 ##Attributions
+* [Python](https://www.python.org/)
 * [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/)
 * [Wikipedia](en.wikipedia.org)
 

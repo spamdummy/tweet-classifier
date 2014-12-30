@@ -53,5 +53,12 @@ for category,urls in training_data.items():
 #now we can put the classifier into action. Here we are classifying some tweets!
 print t.classify("Sorry grilled cheese sandwiches, we've moved on to grilled chocolate sandwiches.")
 print t.classify("Arkansas defense suffocates Texas in 31-7 win.")
-
 ```
+
+##The Details
+Calling GetPage.getURLText grabs a webpage's text. The cPickle class is used for caching.
+
+##Attributions
+* [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/)
+* [Wikipedia](en.wikipedia.org)
+

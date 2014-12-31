@@ -16,9 +16,13 @@ def first_sentence(text):
 		
 def getWords_weighted(paragraphs):
 	pass
+
+def remove_urls(text):
+	return re.sub("https?://[^\s]+","",text)
 	
 def getWords(text):
 	assert type(text) in (str,unicode)
+	text = remove_urls(text)
 	words = re.findall("[a-z]{2,}",text,re.I)	
 	#make everything lowercase.
 	words = map(lambda x:x.lower(),words)
@@ -73,9 +77,11 @@ def smartLowerCase(string):
 	return string.lower()
 	
 def test():
-	u = "http://en.wikipedia.org/wiki/Kanye_West"
-	t = getParagraphs(42)
-	print t
-	
+	text = """
+	Hello World
+	https://twitter.com/This_shouldnt_be_visible
+	http://twitter.com/This_shouldnt_be_visible
+	"""	
+	print remove_urls(text)
 if __name__ == "__main__":
 	test()

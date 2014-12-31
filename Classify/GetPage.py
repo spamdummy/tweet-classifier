@@ -7,10 +7,29 @@ CACHE_PATH = "/var/tmp/pageCache"
 CACHE_PATH_B = "/var/tmp/parsedHTMLCache"
 
 USER_AGENT = 'Mozilla/5.0'
-opener = urllib2.build_opener()
-opener.addheaders = [('User-agent', USER_AGENT)]
 
 
+HTTP_HEADERS = {
+	"User-Agent" : USER_AGENT,
+}
+
+	
+#Modified http://stackoverflow.com/a/5538568
+def get_redirected_url(url):
+	opener = urllib2.build_opener(urllib2.HTTPRedirectHandler)
+	req = urllib2.Request(url,None,HTTP_HEADERS)
+	request = opener.open(req)
+	return request.url
+	
+	
+def openURL(url):
+	url = get_redirected_url(url)
+	req = urllib2.Request(url,None,HTTP_HEADERS)
+	f = urllib2.urlopen(req)
+	t = f.read()
+	f.close()
+	return t
+	
 def readURL(url):
 	if not os.path.exists(CACHE_PATH):
 		os.makedirs(CACHE_PATH)	
@@ -26,13 +45,11 @@ def readURL(url):
 		return t
 	elif isinstance(url,int):
 		raise Exception(url,"not cached")
-	
-	f = opener.open(url)
-	html = f.read()
-	f.close()
-	with open(path,"w") as out:
-		out.write(html)	
-	return html
+	else:
+		html = openURL(url)	
+		with open(path,"w") as out:
+			out.write(html)	
+		return html
 	
 		
 def getURLText(url):
@@ -51,3 +68,4 @@ def getURLText(url):
 		with open(path,"wb") as f:
 			pickle.dump(html_parsed,f)
 		return html_parsed
+

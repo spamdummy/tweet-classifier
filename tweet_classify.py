@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#Example usage
 from Classify.ScienceClassifier import getClassifier
 
 data = {

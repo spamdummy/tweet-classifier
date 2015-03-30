@@ -1,4 +1,4 @@
-tweet-classify
+Tweet Classifier
 ==============
 This project aims to classify Tweets as science or non-science related.
 The ScienceClassifier is a trained version of the generic TextClassifier.
